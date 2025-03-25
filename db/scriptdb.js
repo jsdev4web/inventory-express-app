@@ -61,7 +61,7 @@ VALUES
 async function main() {
     console.log("seeding...");
     const client = new Client({
-      connectionString: "postgresql://jsdev4web:password@localhost:5432/games",
+      connectionString: "postgres://koyeb-adm:npg_KoTs5cDMqxe9@ep-bold-river-a20i7id6.eu-central-1.pg.koyeb.app/koyebdb",
     });
     await client.connect();
     await client.query(SQL);
