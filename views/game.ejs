@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+<body>
+  <h1><%= title %></h1><br>
+
+  <h3>Create Game</h3>
+  <form action="/game" method="POST">
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" required>
+    <br><label for="publisher_id">Publisher_ID: </label>
+    <input type="number" name="publisher_id" id="publisher_id" required>
+    <br><label for="year">Year: </label>
+    <input type="number" name="year" id="year" required>
+    <br><label for="game_id">Game_ID: </label>
+    <input type="number" name="game_id" id="game_id" required>
+    <br><button type="submit">Submit</button>
+  </form>
+
+  
+  <a href="/">Back to home</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+<body>
+
+  <h1><%= title %></h1>
+  <form action="/<%= gameid %>/review-update" method="POST">
+    <label for="rating">Rating: </label>
+    <input type="text" name="rating" id="rating" required><br>
+    <label for="game_id">Game ID: </label>
+    <input type="number" name="game_id" id="game_id" required><br>
+    <button type="submit">Update Rating</button>
+  </form>
+  <a href="/">Back to home</a>
+</body>
+</html>
+
+
+ 

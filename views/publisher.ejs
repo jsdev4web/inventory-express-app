@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+<body>
+  <h1><%= title %></h1><br>
+
+  <h3>Create Publisher</h3>
+  <form action="/publisher" method="POST">
+    <label for="publisher_id">Publisher_ID: </label>
+    <input type="number" name="publisher_id" id="publisher_id" required>
+    <br><label for="publisher_name">Publisher_name: </label>
+    <input type="text" name="publisher_name" id="publisher_name" required>
+    <br><button type="submit">Submit</button>
+  </form>
+
+  
+  <a href="/">Back to home</a>
+</body>
+</html>

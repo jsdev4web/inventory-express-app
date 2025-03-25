@@ -1,0 +1,51 @@
+<!-- views/createUser.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+<body>
+  <h1><%= title %></h1><br>
+
+  <h3>Create Game</h3>
+  <form action="/create" method="POST">
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" required>
+    <br><label for="publisher_id">Publisher_ID: </label>
+    <input type="number" name="publisher_id" id="publisher_id" required>
+    <br><label for="year">Year: </label>
+    <input type="number" name="year" id="year" required>
+    <br><label for="game_id">Game_ID: </label>
+    <input type="number" name="game_id" id="game_id" required>
+    <br><button type="submit">Submit</button>
+  </form>
+
+  <h3>Create Review</h3>
+  <form action="/create" method="POST">
+    <label for="game_id">Game_ID: </label>
+    <input type="number" name="game_id" id="game_id" required>
+    <br><label for="rating">Rating: </label>
+    <input type="number" name="rating" id="rating" required>
+    <br><button type="submit">Submit</button>
+  </form>
+
+  <h3>Create Publisher</h3>
+  <form action="/create" method="POST">
+    <label for="publisher_id">Publisher_ID: </label>
+    <input type="number" name="publisher_id" id="publisher_id" required>
+    <br><label for="publisher_name">Publisher_name: </label>
+    <input type="text" name="publisher_name" id="publisher_name" required>
+    <br><button type="submit">Submit</button>
+  </form>
+
+  <h3>Create Genre</h3>
+  <form action="/create" method="POST">
+    <label for="genres_id">Genre_ID: </label>
+    <input type="number" name="genres_id" id="genres_id" required>
+    <br><label for="genres_name">Genre Name: </label>
+    <input type="text" name="genres_name" id="genres_name" required>
+    <br><button type="submit">Submit</button>
+  </form>
+  <a href="/">Back to home</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+<body>
+  <h1><%= title %></h1><br>
+
+  <h3>Create Genre</h3>
+  <form action="/genre" method="POST">
+    <label for="genres_id">Genre_ID: </label>
+    <input type="number" name="genres_id" id="genres_id" required>
+    <br><label for="genres_name">Genre Name: </label>
+    <input type="text" name="genres_name" id="genres_name" required>
+    <br><button type="submit">Submit</button>
+  </form>
+  <a href="/">Back to home</a>
+</body>
+</html>

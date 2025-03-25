@@ -1,0 +1,41 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <h1><%= title %></h1>
+  <h3>Game List</h3>
+  <ul>
+    <% if (locals.game) {%>
+      <% game.forEach(item => { %>
+        <br><ul>
+            <li>ID: <%= item.id %></li>
+            <li>Name: <%= item.name %></li>
+            <li>Publisher_ID: <%= item.publisher_id %></li>
+            <li>Year: <%= item.year %></li>
+            <li>Game_ID: <%= item.game_id %></li>
+            <li>
+              ID: <%= item.id %>, Name: <%= item.name %>, Publisher_id <%= item.publisher %>, Year: <%= item.year %>, Game_id <%= item.game_id %>
+              <a href="/<%= item.id %>/game-update">Update</a>
+            </li>
+              
+              <li>
+              <form action="/<%= item.id %>/game-delete" method="POST" style="display:inline;">
+                <button type="submit" onclick="return confirm('Are you sure you want to delete this post?');">Delete</button>
+              </form>
+            </li>
+
+           
+        </ul>
+      <% }); %>
+    <% } %>
+  </ul>
+  <a href="/game">Add a game</a><br>
+  <a href="/">Home</a>
+  
+
+  
+</body>
+</html>
