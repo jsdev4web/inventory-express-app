@@ -9,5 +9,10 @@ module.exports = new Pool({
   database: "jsdev4web",
   password: "j1QLj68sMZUHMiuRnU6FhMSY8n7nbCJe",
   port: 5432, // The default port
-  ssl: true
+  ssl:  {
+    rejectUnauthorized : false,
+    ca   : fs.readFileSync("server-ca.pem").toString(),
+    key  : fs.readFileSync("client-key.pem").toString(),
+    cert : fs.readFileSync("client-cert.pem").toString(),
+}
 });
