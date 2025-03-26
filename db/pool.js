@@ -8,5 +8,6 @@ module.exports = new Pool({
   user: "jsdev4web",
   database: "jsdev4web",
   password: "j1QLj68sMZUHMiuRnU6FhMSY8n7nbCJe",
-  port: 5432 // The default port
+  port: 5432, // The default port
+  ssl: true
 });
