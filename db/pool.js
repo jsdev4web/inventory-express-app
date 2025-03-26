@@ -12,8 +12,5 @@ module.exports = new Pool({
   port: 5432, // The default port
   ssl:  {
     rejectUnauthorized : false,
-    ca   : fs.readFileSync("server-ca.pem").toString(),
-    key  : fs.readFileSync("client-key.pem").toString(),
-    cert : fs.readFileSync("client-cert.pem").toString(),
 }
 });
