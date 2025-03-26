@@ -1,6 +1,6 @@
 require('dotenv').config()
 const { raw } = require('express');
-const pool = require("../.env")
+//const pool = require("../.env")
 
 const pool = require("./pool")
 
