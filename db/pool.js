@@ -12,5 +12,5 @@ module.exports = new Pool({
   port: 5432, // The default port
   ssl: {
     rejectUnauthorized: false,
-  }
+  },
 });
