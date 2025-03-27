@@ -1,5 +1,4 @@
 const { Pool } = require("pg");
-const fs = require("fs")
 
 // All of the following properties should be read from environment variables
 // We're hardcoding them here for simplicity
