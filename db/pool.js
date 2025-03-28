@@ -9,8 +9,10 @@ module.exports = new Pool({
   host: process.env.DB_HOST,
   database: process.env.DB_DATABASE,
   port: Number(process.env.DB_PORT),
-
-  ssl:process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0,
+  ssl: {
+    rejectUnauthorized: true,
+    ca: process.env.DB_CA,
+  },
 
   
 });
@@ -23,10 +25,7 @@ module.exports = new Pool({
   password: "AVNS_tt7fmfIzilPqBdPVUmo",
   port: 23300 // The default port
 
+  ssl:process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0,
 
-  ssl: {
-    rejectUnauthorized: true,
-    ca: process.env.DB_CA,
-  },
 
 }); */
