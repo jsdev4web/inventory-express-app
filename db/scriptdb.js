@@ -61,7 +61,8 @@ VALUES
 async function main() {
     console.log("seeding...");
     const client = new Client({
-      connectionString: "postgres://avnadmin:AVNS_tt7fmfIzilPqBdPVUmo@jsdev4web-jsdev4web.l.aivencloud.com:23300/defaultdb?sslmode=require",
+      connectionString: process.env.DATABASE_URL,
+      ssl: { rejectUnauthorized: false },
     });
     await client.connect();
     await client.query(SQL);
@@ -70,3 +71,5 @@ async function main() {
   }
   
   main();
+
+  //      connectionString: "postgres://avnadmin:AVNS_tt7fmfIzilPqBdPVUmo@jsdev4web-jsdev4web.l.aivencloud.com:23300/defaultdb?sslmode=require",
