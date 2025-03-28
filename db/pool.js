@@ -3,7 +3,7 @@ const { Pool } = require("pg");
 // All of the following properties should be read from environment variables
 // We're hardcoding them here for simplicity
 
-export default new Pool({
+module.exports = new Pool({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   host: process.env.DB_HOST,
